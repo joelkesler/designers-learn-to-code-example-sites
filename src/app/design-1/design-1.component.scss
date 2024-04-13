@@ -1,0 +1,123 @@
+@use '../shared.scss' as *;
+
+$tablet-max-width: 1024px;
+$mobile-max-width: 800px;
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: $mobile-max-width) {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 24px;
+    max-width: calc(1120px + 40px + 40px);
+    width: 100%;
+    padding: 40px;
+
+    @media screen and (max-width: $mobile-max-width) {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 600px;
+        padding: 0 24px;
+    }
+
+}
+
+.hero-image {
+    flex-grow: 3;
+    aspect-ratio: 1;
+    width: 480px;
+    max-width: 480px;
+    background: orange;
+    min-width: unset;
+    background-image: url('/assets/background-image-1.jpg');
+    background-size: cover;
+    border-radius: 8px;
+
+    @media screen and (max-width: $mobile-max-width) {
+        width: 110px;
+    }
+}
+
+.content {
+    flex-shrink: 3;
+    max-width: 500px;
+
+    @media screen and (max-width: $mobile-max-width) {
+        max-width: unset;
+    }
+}
+
+h1 {
+    font-size: 38px;
+    color: $primary-text-color;
+    text-wrap: balance;
+
+    @media screen and (max-width: $tablet-max-width) {
+        margin-top: 8px;
+        font-size: 28px;
+    }
+
+    .wave {
+        font-size: .84em;
+        margin-bottom: 16px;
+        margin-top: 0;
+
+        @media screen and (max-width: $mobile-max-width) {
+            display: none;
+        }
+    }
+
+}
+
+p {
+    font-size: 21px;
+    line-height: 147%;
+    color: $secondary-text-color;
+    text-wrap: balance;
+
+    @media screen and (max-width: $tablet-max-width) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: $mobile-max-width) {
+        text-wrap: unset;
+    }
+}
+
+a {
+    color: $primary-color;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid $border-color;
+    margin-top: 64px;
+    margin-bottom: 24px;
+
+    @media screen and (max-width: $tablet-max-width) {
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+}
+
+p.bottom-text {
+    font-size: 18px;
+
+    @media screen and (max-width: $tablet-max-width) {
+        font-size: 14px;
+    }
+}
