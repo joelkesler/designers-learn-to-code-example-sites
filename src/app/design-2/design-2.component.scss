@@ -1,0 +1,79 @@
+@use '../shared.scss' as *;
+
+$tablet-max-width: 1024px;
+$mobile-max-width: 800px;
+
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: $app-background;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  max-width: 780px;
+  max-height: 480px;
+  gap: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.border-image {
+  width: 180px;
+  height: 100%;
+  background-image: url('/assets/background-image-1.jpg');
+  background-size: cover;
+  background-position: top center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.content {
+  flex-shrink: 2;
+  max-width: 475px;
+}
+
+h1 {
+  font-size: 32px;
+  color: $primary-text-color;
+  text-wrap: balance;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  .emoji {
+    font-size: 0.84em;
+    margin-bottom: 14px;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 147%;
+  color: $secondary-text-color;
+  text-wrap: balance;
+}
+
+a {
+  color: $primary-color;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid $border-color;
+  margin-top: 64px;
+  margin-bottom: 8px;
+}
+
+p.bottom-text {
+  font-size: 14px;
+}
