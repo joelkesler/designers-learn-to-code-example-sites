@@ -7,6 +7,7 @@ Feel free to use the code for your own personal projects, but please do not rese
 ---
 
 Why is this an Angular app instead of a regular HTML page?
+
 Good question! This app was used as a showcase for students, allowing them to view the code and try it out directly in the browser, which made the most sense for hands-on learning. Unfortunately, StackBlitz had some issues with native HTML and CSS serving during development. Since Vendasta primarily uses Angular, it was practical to create a quick Angular app to ensure reliable live reloading while working.
 
 [Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/joelkesler/designers-learn-to-code-example-sites)
