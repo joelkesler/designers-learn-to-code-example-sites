@@ -89,7 +89,7 @@ main {
   max-width: 480px;
   background: orange;
   min-width: unset;
-  background-image: url('/temp-image.jpg');
+  background-image: url('./temp-image.jpg');
   background-size: cover;
   border-radius: 8px;
 }
