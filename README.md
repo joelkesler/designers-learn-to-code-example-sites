@@ -9,3 +9,7 @@ Feel free to use the code for your own personal projects, but please do not rese
 [View the site on Vercel: https://designers-learn-to-code-example-sites.vercel.app/](https://designers-learn-to-code-example-sites.vercel.app/)
 
 [Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/joelkesler/designers-learn-to-code-example-sites)
+
+---
+
+<img width="627" alt="Screenshot 2024-11-01 at 12 12 18 AM" src="https://github.com/user-attachments/assets/09ec4601-96c7-4c4b-b343-1df036af6d53">
