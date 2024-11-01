@@ -1,6 +1,6 @@
 # designers-learn-to-code-example-sites
 
-At Vendasta, I taught designers the basics of HTML and CSS. To support the lessons, I created three simple designs and websites (two of which are currently available here).
+At Vendasta, I taught designers the basics of HTML and CSS. To support the lessons, I created three simple designs and websites (two of which are currently available here, and the third is still being built in my spare time).
 
 Feel free to use the code for your own personal projects, but please do not resell it or use it as part of a paid service.
 
