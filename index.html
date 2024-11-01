@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Design Chooser</title>
+    <meta charset="UTF-8" />
+    <style>
+      /* Variables */
+      /* Basic CSS Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* Demo-specific styling */
+      body {
+        text-align: center;
+        margin-top: 50px;
+      }
+      /* This container helps the thumbnail behave as if it were an unscaled IMG element */
+      .thumbnail-container {
+        width: calc(1440px * 0.2);
+        height: calc(900px * 0.2);
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        background: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+      }
+      .thumbnail-container.mobile {
+        width: calc(414px * 0.3);
+        height: calc(600px * 0.3);
+      }
+      /* Image Icon for the Background */
+      .thumbnail-container::before {
+        position: absolute;
+        left: calc(50% - 16px);
+        top: calc(50% - 18px);
+        opacity: 0.2;
+        display: block;
+        transform: scale(2);
+        color: silver;
+      }
+      /* This is a masking container for the zoomed iframe element */
+      .thumbnail {
+        display: block;
+        -ms-zoom: 0.2;
+        -moz-transform: scale(0.2);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.2);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.2);
+        -webkit-transform-origin: 0 0;
+      }
+      .thumbnail-container.mobile .thumbnail {
+        -ms-zoom: 0.3;
+        -moz-transform: scale(0.3);
+        -o-transform: scale(0.3);
+        -webkit-transform: scale(0.3);
+      }
+      /* This is our screen sizing */
+      .thumbnail,
+      .thumbnail iframe {
+        width: 1440px;
+        height: 900px;
+      }
+      .thumbnail-container.mobile .thumbnail,
+      .thumbnail-container.mobile .thumbnail iframe {
+        width: 414px;
+        height: 900px;
+      }
+      /* This facilitates the fade-in transition instead of flicker. It also helps us maintain the illusion that this is an image, since some webpages will have a preloading animation or wait for some images to download */
+      .thumbnail iframe {
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+        background-color: white;
+      }
+      /* This pseudo element masks the iframe, so that mouse wheel scrolling and clicking do not affect the simulated "screenshot" */
+      .thumbnail:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .site-link {
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        background: #efefef;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="site-link">
+        <div class="thumbnail-container">
+          <a href="./design-1/index.html" class="thumbnail">
+            <div>
+              <iframe src="./design-1/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail-container mobile">
+          <a href="./design-1/index.html" class="thumbnail">
+            <div>
+              <iframe src="./design-1/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-link">
+        <div class="thumbnail-container">
+          <a href="./design-2/index.html" class="thumbnail">
+            <div>
+              <iframe src="./design-2/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail-container mobile">
+          <a href="./design-2/index.html" class="thumbnail">
+            <div>
+              <iframe src="./design-2/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="site-link">
+        <div class="thumbnail-container">
+          <a href="./design-3/index.html" class="thumbnail">
+            <div>
+              <iframe src="./design-3/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+            </div>
+          </a>
+        </div>
+        <div class="thumbnail-container mobile">
+          <a href="./design-3/index.html" class="thumbnail">
+            <div>
+              <iframe src="./design-3/index.html" frameborder="0" onload="this.style.opacity = 1"></iframe>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
